@@ -1,5 +1,7 @@
-const submitBtn = document.querySelector('.submit-btn');
 const inputFields = document.querySelectorAll('.form-input-field');
+const submitBtn = document.querySelector('.submit-btn');
+const formArea = document.querySelector('.form-area');
+const form = document.querySelector('form');
 
 let formData = {
   firstName: '',
@@ -8,19 +10,27 @@ let formData = {
   message: ''
 }
 
+const showSuccess = () => {
+  const successMsg = document.createElement('h3');
+  successMsg.innerText = 'Form submission was successful!';
+  formArea.appendChild(successMsg);
+}
+
+const removeForm = () => {
+  form.remove();
+}
+
 const handleSubmit = (e) => {
   e.preventDefault();
-  console.log('handling submit!', e);
   console.log('handling submit!', formData);
-
+  removeForm();
+  showSuccess();
 };
 
 const handleInput = (e) => {
   let name = e.target.name;
-  console.log('handling input', name);
   if (formData[name] === '') {
     formData[name] = e.target.value;
-    console.log('matched', formData[name]);
   }
 };
 
