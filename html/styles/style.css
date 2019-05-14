@@ -1,6 +1,45 @@
-* {}
+* {
+  box-sizing: border-box;
+}
 html {}
 body {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
 }
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: center; */
+}
+
+form .form-fields {
+  display: grid;
+  grid-template-columns: 25% 25%;
+  align-items: center;
+}
+
+form .form-input-field {
+  margin: 10px auto;
+  width: 200px;
+  border-radius: 5px;
+}
+
+.btn {
+  margin: 10px auto;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  height: 40px;
+  width: 90px;
+  background: white;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: dodgerblue;
+  color: white
+}
+
