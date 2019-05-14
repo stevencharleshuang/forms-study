@@ -10,6 +10,12 @@ let formData = {
   message: ''
 }
 
+const postFormData = (data) => {
+  console.log('Posting Form Data: ', data);
+  // Fetch request here:
+  
+}
+
 const showSuccess = () => {
   const successMsg = document.createElement('h3');
   successMsg.innerText = 'Form submission was successful!';
@@ -22,7 +28,7 @@ const removeForm = () => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  console.log('handling submit!', formData);
+  postFormData(formData);
   removeForm();
   showSuccess();
 };
