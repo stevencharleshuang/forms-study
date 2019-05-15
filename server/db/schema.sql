@@ -1,9 +1,9 @@
-DROP DATABASE users_server;
-CREATE DATABASE users_server;
+DROP DATABASE messages_server;
+CREATE DATABASE messages_server;
 
-\c users_server;
+\c messages_server;
 
-CREATE TABLE users (
+CREATE TABLE messages (
   id         SERIAL PRIMARY KEY NOT NULL,
   firstName  VARCHAR(50),
   lastName   VARCHAR(50),
