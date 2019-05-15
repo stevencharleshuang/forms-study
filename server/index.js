@@ -5,7 +5,17 @@ const PORT = process.env.PORT || 4000;
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
+const messagesRouter = require('./routes/messagesRouter');
+
+// Utilities
+app.use(logger('dev'));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Routing
 app.get('/', (req, res) => res.json({ message: 'Reached the form server root' }));
+app.use('/api', messagesRouter);
 
 // GLOBAL ERROR HANDLER
 app.use((err, req, res, next) => {
