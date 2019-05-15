@@ -7,13 +7,23 @@ let formData = {
   firstName: '',
   lastName: '',
   email: '',
-  message: ''
+  body: ''
 }
 
-const postFormData = (data) => {
-  console.log('Posting Form Data: ', data);
-  // Fetch request here:
-  
+const postFormData = (url = '', data = {}) => {
+  return fetch(url, {
+      method: 'POST',
+      mode: 'cors', 
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      redirect: 'follow',
+      referrer: 'no-referrer',
+      body: JSON.stringify(data)
+  })
+  .then(response => response.json()); // parses JSON response into native Javascript objects 
 }
 
 const showSuccess = () => {
@@ -28,7 +38,7 @@ const removeForm = () => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  postFormData(formData);
+  postFormData('http://localhost:4000/api/messages', formData);
   removeForm();
   showSuccess();
 };
