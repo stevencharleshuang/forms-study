@@ -1,8 +1,8 @@
-\c forms_server
+\c users_server
 
-DROP TABLE IF EXISTS forms CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
-CREATE TABLE forms(
+CREATE TABLE users (
          id SERIAL PRIMARY KEY NOT NULL,
   firstName VARCHAR(50),
    lastName VARCHAR(50),
@@ -10,7 +10,7 @@ CREATE TABLE forms(
        body VARCHAR(1000)
 );
 
-INSERT INTO forms(firstName, lastName, email, body)
+INSERT INTO users (firstName, lastName, email, body)
      VALUES ('John', 'Doe', 'john.doe@email.com', 'Hello World!'),
             ('Jane', 'Doe', 'jane.doe@email.com', 'Hello World!'),
             ('John', 'Smith', 'john.smith@email.com', 'Hello World!'),
