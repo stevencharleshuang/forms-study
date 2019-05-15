@@ -10,18 +10,19 @@ body {
 form {
   display: flex;
   flex-flow: column nowrap;
-  /* justify-content: center; */
 }
 
 form .form-fields {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 25% 25%;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3px;
   align-items: center;
 }
 
 form .form-input-field {
   margin: 10px auto;
-  width: 200px;
+  width: 300px;
   border-radius: 5px;
 }
 
@@ -43,3 +44,6 @@ form .form-input-field {
   color: white
 }
 
+textarea {
+  resize: none; 
+}
