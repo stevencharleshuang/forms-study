@@ -31,8 +31,9 @@ form .form-input-field {
   font-family: inherit;
   font-size: inherit;
   font-weight: 500;
-  height: 40px;
-  width: 90px;
+  height: auto;
+  width: auto;
+  padding: 10px 20px;
   background: white;
   border: 1px solid dodgerblue;
   border-radius: 5px;
