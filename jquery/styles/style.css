@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+html {}
+body {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+form .form-fields {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3px;
+  align-items: center;
+}
+
+form .form-input-field {
+  margin: 10px auto;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.btn {
+  margin: 10px auto;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  height: auto;
+  width: auto;
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: dodgerblue;
+  color: white
+}
+
+textarea {
+  resize: none; 
+}
